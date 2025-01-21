@@ -1,0 +1,99 @@
+/*======================= BASE STYLES =======================*/
+footer {
+    background: var(--color-primary);
+    padding: 3rem 1rem; /* Added side padding for smaller screens */
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 7rem;
+}
+
+footer a {
+    color: var(--color-bg);
+    text-decoration: none; /* Ensure consistent styling for links */
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--color-white); /* Subtle hover effect for links */
+}
+
+.footer__logo {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    display: inline-block;
+}
+
+.permalinks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem; /* Slightly reduced gap for better spacing */
+    margin: 0 auto 2rem;
+    color: var(--color-bg);
+    cursor: pointer;
+}
+
+.footer__socials {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.footer__socials a {
+    background: var(--color-bg);
+    color: var(--color-white);
+    padding: 0.8rem;
+    border-radius: 0.7rem;
+    display: flex;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.footer__socials a:hover {
+    background: transparent;
+    color: var(--color-bg);
+    border-color: var(--color-bg);
+}
+
+.footer__copyright {
+    margin-bottom: 2rem;
+    color: var(--color-bg);
+}
+
+/*======================= MEDIA QUERIES =======================*/
+
+/* Medium Devices (Tablets) */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+    footer {
+        padding: 4rem 2rem; /* Adjust padding for medium screens */
+    }
+
+    .permalinks {
+        gap: 2rem; /* Increase spacing for better layout */
+    }
+
+    .footer__socials {
+        margin-bottom: 3rem;
+    }
+
+    .footer__copyright {
+        margin-bottom: 2.5rem;
+    }
+}
+
+/* Large Devices (Desktops) */
+@media screen and (min-width: 1025px) {
+    footer {
+        padding: 5rem 0; /* Larger padding for better visual balance */
+    }
+
+    .permalinks {
+        gap: 3rem; /* More spacing between links */
+    }
+
+    .footer__socials {
+        margin-bottom: 4rem;
+    }
+}

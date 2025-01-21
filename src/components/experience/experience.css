@@ -1,0 +1,83 @@
+/*======================= BASE STYLES =======================*/
+.experience__container {
+    display: grid;
+    grid-template-columns: 1fr; /* Default to a single-column layout for small screens */
+    gap: 1.5rem; /* Consistent gap between items */
+    padding: 1rem;
+}
+
+.experience__container > div {
+    background: var(--color-bg-variant);
+    padding: 2rem;
+    border-radius: 2rem;
+    border: 1px solid transparent;
+    transition: var(--transition);
+    text-align: center;
+}
+
+.experience__container > div:hover {
+    background: transparent;
+    border-color: var(--color-primary-variant);
+    cursor: default;
+}
+
+.experience__container > div h3 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: var(--color-primary);
+}
+
+.experience__content {
+    display: grid;
+    grid-template-columns: 1fr; /* Default single-column layout for smaller screens */
+    row-gap: 1.5rem;
+    gap: 1rem;
+}
+
+.experience__details {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.experience__details-icon {
+    margin-top: 0.2rem;
+    color: var(--color-primary);
+}
+
+/*======================= MEDIA QUERIES =======================*/
+
+/* Medium Devices (Tablets) */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+    .experience__container {
+        grid-template-columns: 1fr 1fr; /* Two-column layout for medium devices */
+        gap: 2rem;
+    }
+
+    .experience__container > div {
+        width: auto; /* Adjusted to prevent overflow */
+        padding: 2rem 3rem;
+    }
+
+    .experience__content {
+        grid-template-columns: 1fr 1fr; /* Two-column layout inside each experience box */
+        gap: 1.5rem;
+    }
+}
+
+/* Large Devices (Desktops) */
+@media screen and (min-width: 1025px) {
+    .experience__container {
+        grid-template-columns: 1fr 1fr; /* Two-column layout for larger screens */
+        gap: 2rem;
+    }
+
+    .experience__container > div {
+        padding: 2.4rem 5rem;
+    }
+
+    .experience__content {
+        grid-template-columns: 1fr 1fr; /* Maintain two-column layout for content */
+        row-gap: 2rem;
+    }
+}
