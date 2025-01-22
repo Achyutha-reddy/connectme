@@ -1,10 +1,9 @@
 /*======================= BASE STYLES =======================*/
 .container.contact__container {
-    width: 90%; /* Default to a wide width for small devices */
-    margin: 0 auto; /* Center the container */
+    width: 58%;
     display: grid;
-    grid-template-columns: 1fr; /* Single column layout for smaller screens */
-    gap: 1.5rem; /* Consistent gap between items */
+    grid-template-columns: 30% 50%;
+    gap: 12%;
 }
 
 .contact__options {
@@ -38,7 +37,7 @@
     font-size: 0.8rem;
 }
 
-/*=================================FORM=====================*/
+/*================================= FORM =====================*/
 form {
     display: flex;
     flex-direction: column;
@@ -59,19 +58,27 @@ textarea {
 /*======================= MEDIA QUERIES =======================*/
 
 /* Medium Devices (Tablets) */
-@media screen and (min-width: 601px) and (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
     .container.contact__container {
-        width: 80%; /* Slightly smaller width for medium screens */
-        grid-template-columns: 1fr; /* Still single-column layout */
+        grid-template-columns: 1fr;
         gap: 2rem;
+    }
+
+    .contact__options,
+    form {
+        width: 100%; /* Ensure both sections take full width */
     }
 }
 
-/* Large Devices (Desktops) */
-@media screen and (min-width: 1025px) {
+/* Small Devices (Phones) */
+@media screen and (max-width: 600px) {
     .container.contact__container {
-        width: 58%; /* Original width for larger screens */
-        grid-template-columns: 30% 50%; /* Two-column layout for desktop */
-        gap: 12%; /* Maintain the gap between columns */
+        width: var(--container-width-sm, 100%); /* Default width for small devices */
+        gap: 1rem; /* Compact gap for small screens */
+    }
+
+    .contact__options,
+    form {
+        width: 100%; /* Full width for both sections */
     }
 }

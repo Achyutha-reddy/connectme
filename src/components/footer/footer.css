@@ -1,7 +1,7 @@
 /*======================= BASE STYLES =======================*/
 footer {
     background: var(--color-primary);
-    padding: 3rem 1rem; /* Added side padding for smaller screens */
+    padding: 3rem 1rem; /* Side padding for smaller screens */
     text-align: center;
     font-size: 0.9rem;
     margin-top: 7rem;
@@ -9,12 +9,12 @@ footer {
 
 footer a {
     color: var(--color-bg);
-    text-decoration: none; /* Ensure consistent styling for links */
+    text-decoration: none; /* Consistent link styling */
     transition: color 0.3s ease;
 }
 
 footer a:hover {
-    color: var(--color-white); /* Subtle hover effect for links */
+    color: var(--color-white); /* Hover effect */
 }
 
 .footer__logo {
@@ -28,7 +28,7 @@ footer a:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 1.5rem; /* Slightly reduced gap for better spacing */
+    gap: 1.5rem; /* Default spacing for small devices */
     margin: 0 auto 2rem;
     color: var(--color-bg);
     cursor: pointer;
@@ -64,6 +64,26 @@ footer a:hover {
 
 /*======================= MEDIA QUERIES =======================*/
 
+/* Small Devices (Phones) */
+@media screen and (max-width: 600px) {
+    footer {
+        padding: 2.5rem 1rem; /* Compact padding for small screens */
+        font-size: 0.8rem; /* Slightly smaller font size */
+    }
+
+    .permalinks {
+        gap: 1rem; /* Reduce spacing between links */
+    }
+
+    .footer__socials {
+        gap: 0.8rem; /* Compact gap for social icons */
+    }
+
+    .footer__logo {
+        font-size: 1.8rem; /* Slightly smaller logo for small devices */
+    }
+}
+
 /* Medium Devices (Tablets) */
 @media screen and (min-width: 601px) and (max-width: 1024px) {
     footer {
@@ -71,22 +91,27 @@ footer a:hover {
     }
 
     .permalinks {
-        gap: 2rem; /* Increase spacing for better layout */
+        gap: 2rem; /* Increased spacing for better layout */
     }
 
     .footer__socials {
+        gap: 1.5rem; /* Larger gap for icons */
         margin-bottom: 3rem;
     }
 
     .footer__copyright {
         margin-bottom: 2.5rem;
     }
+
+    .footer__logo {
+        font-size: 2.2rem; /* Slightly larger logo for tablets */
+    }
 }
 
 /* Large Devices (Desktops) */
 @media screen and (min-width: 1025px) {
     footer {
-        padding: 5rem 0; /* Larger padding for better visual balance */
+        padding: 5rem 0; /* Larger padding for visual balance */
     }
 
     .permalinks {
@@ -95,5 +120,30 @@ footer a:hover {
 
     .footer__socials {
         margin-bottom: 4rem;
+        gap: 2rem; /* Wider gap for desktop view */
+    }
+
+    .footer__logo {
+        font-size: 2.5rem; /* Larger logo for desktops */
+    }
+}
+
+/* Extra-Large Devices (4K Screens) */
+@media screen and (min-width: 1441px) {
+    footer {
+        padding: 6rem 0; /* Extra padding for large screens */
+    }
+
+    .permalinks {
+        gap: 4rem; /* Wider spacing for links */
+    }
+
+    .footer__socials {
+        margin-bottom: 5rem;
+        gap: 2.5rem; /* Wider gaps between social icons */
+    }
+
+    .footer__logo {
+        font-size: 3rem; /* Larger logo for extra-large screens */
     }
 }
